@@ -89,15 +89,15 @@ plt.ylabel('number of samples')
 plt.show()
 
 def below_threshold_len(max_len, nested_list):
-  cnt = 0
-  for s in nested_list:
-    if(len(s) <= max_len):
-        cnt = cnt + 1
+    cnt = 0
+    for s in nested_list:
+        if(len(s) <= max_len):
+            cnt = cnt + 1
         
-print('리뷰의 최대 길이 :',max(len(l) for l in X_train))
-print('리뷰의 평균 길이 :',sum(map(len, X_train))/len(X_train))
+print('문장의 최대 길이 :',max(len(l) for l in X_train))
+print('문장의 평균 길이 :',sum(map(len, X_train))/len(X_train))
 
-max_len = 40
+max_len = 100
 below_threshold_len(max_len, X_train)
 
 X_train = pad_sequences(X_train, maxlen = max_len)
@@ -123,22 +123,31 @@ history = model.fit(X_train, y_train, epochs=20, callbacks=[es, mc], batch_size=
 loaded_model = load_model('best_model.h5')
 print("테스트 정확도: %.4f" % (loaded_model.evaluate(X_test, y_test)[1]))
 
-true_false_box = [0, 0]
+new_slice = re.compile(r"[http].*")
+
+import copy
+
+url_link = open("upload_file.txt", 'w')
 
 def sentiment_predict(new_sentence):
-  new_sentence = re.sub(r'[^ㄱ-ㅎㅏ-ㅣ가-힣 ]','', new_sentence)
-  new_sentence = mecab.morphs(new_sentence) # 토큰화
-  new_sentence = [word for word in new_sentence if not word in stopwords] # 불용어 제거
-  encoded = tokenizer.texts_to_sequences([new_sentence]) # 정수 인코딩
-  pad_new = pad_sequences(encoded, maxlen = max_len) # 패딩
-  score = float(loaded_model.predict(pad_new)) # 예측
-  if(score > 0.5):
-    print("{:.2f}% 확률로 긍정 리뷰입니다.".format(score * 100))
-    true_false_box[0]+=1
-  else:
-    print("{:.2f}% 확률로 부정 리뷰입니다.".format((1 - score) * 100))
-    true_false_box[1]+=1
-    
+    text = copy.copy(new_sentence)
+    url = new_slice.findall(text)
+    data = '\t'+str(url[0])+'\t'+str(text.split(str(url[0]))[1][1:20])+'\n'
+    new_sentence = re.sub(r'[^ㄱ-ㅎㅏ-ㅣ가-힣 ]','', new_sentence)
+    new_sentence = mecab.morphs(new_sentence) # 토큰화
+    new_sentence = [word for word in new_sentence if not word in stopwords] # 불용어 제거
+    encoded = tokenizer.texts_to_sequences([new_sentence]) # 정수 인코딩
+    pad_new = pad_sequences(encoded, maxlen = max_len) # 패딩
+    score = float(loaded_model.predict(pad_new)) # 예측
+    if(score > 0.5):
+        print("{:.2f}% 확률로 긍정 기사입니다.".format(score * 100))
+        url_link.write('1'+str(data))
+    else:
+        print("{:.2f}% 확률로 부정 기사입니다.".format((1 - score) * 100))
+        url_link.write('0'+str(data))
+
 f = open("news_test.txt", 'r')
 string = f.read()
-sentiment_predict(string)
+string = string.split('\n\n')
+for i in string:
+    sentiment_predict(i)
