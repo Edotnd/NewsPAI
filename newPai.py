@@ -34,7 +34,7 @@ stopwords = ['도', '는', '다', '의', '가', '이', '은', '한', '에', '하
              '만', '되', '면', '백신', '인플루엔자', '접종', '독감', '사망', '없', '했', '습니다', '있', '성', 
              '으로', '명', '수', '달', '라고', '것', '다고', '다는', '들', '어', '다며', '에서', '뒤', '해', 
              '청', '후', '일', '맞', '라며', '함', '풀', '인', '군', '더', '었', '이틀', '된', '적', '낮', 
-             '않', '할', '등', '받', '기', '까지', '주', '로', '말', '백색', '입자', '건', '예방']
+             '않', '할', '등', '받', '기', '까지', '주', '로', '말', '백색', '입자', '건', '예방', '해야', '아니']
 
 
 train_data['tokenized'] = train_data['sentence'].apply(mecab.morphs)
@@ -118,7 +118,7 @@ es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=4)
 mc = ModelCheckpoint('best_model.h5', monitor='val_acc', mode='max', verbose=1, save_best_only=True)
 
 model.compile(optimizer='rmsprop', loss='binary_crossentropy', metrics=['acc'])
-history = model.fit(X_train, y_train, epochs=20, callbacks=[es, mc], batch_size=256, validation_split=0.1)
+history = model.fit(X_train, y_train, epochs=30, callbacks=[es, mc], batch_size=256, validation_split=0.1)
 
 loaded_model = load_model('best_model.h5')
 print("테스트 정확도: %.4f" % (loaded_model.evaluate(X_test, y_test)[1]))

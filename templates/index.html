@@ -1,132 +1,39 @@
-<!DOCTYPE html>
 <html>
-
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!--Import Css files-->
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
-
-    <title>뉴스기사 성향 분석 웹 서비스</title>
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
-
-    <!-- Custom fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
-    <link href="https://blackrockdigital.github.io/startbootstrap-resume/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
-    
-  </head>
-
-  <body> 
-  <div class="id-card-container">
-    <div class="id-card">
-      <div class="card-side card-front">
-        <div class="po">
-          <div class="po-header">
-            <h2>Positive</h2>
-          </div>
-          <div class="po-body">
-            <table class="table table-dark">
-              <tr>
-                <td>1</td>
-                <td>제목 : 독감, 문제 없다!</td>
-                <td>내용 : 독감 백신 문제 없는 것으로 밝혀져....</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>제목 : 독감 백신 맞아도 괜찮습니다!</td>
-                <td>내용 : 독감 백신 사망사건과 연관성 떨어져...</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>제목 : 독감, 문제 없다!</td>
-                <td>내용 : 독감 백신 문제 없는 것으로 밝혀져....</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>제목 : 독감 백신 맞아도 괜찮습니다!</td>
-                <td>내용 : 독감 백신 사망사건과 연관성 떨어져...</td>
-              </tr>
-            </table>
-          </div>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <style type="text/css">
+        .div_container {
+            height: 100vh;
+            width:100vw;
+            display:flex; 
+            flex-direction: row;
+        }
+        
+        .div_container .div1 {
+            flex:1;
+        }
+        
+        .div_container .div2 { 
+            flex:1;
+        }
+    </style>
+    <body>
+        <div class="div_container">
+            <div class="div1">
+                {% for i in t_data %}
+                    <a href="{{ i[0] }}">긍정기사</a>
+                    <p>{{ i[1] }}</p>
+                    <br>
+                {% endfor %}
+            </div>
+            <div class="div1">
+                {% for i in f_data %}
+                    <a href="{{ i[0] }}">부정기사</a>
+                    <p>{{ i[1] }}</p>
+                    <br>
+                {% endfor %}
+            </div>
         </div>
-        <div class="ne">
-          <div class="ne-header">
-            <h2>Negative</h2>
-          </div>
-          <div class="ne-body">
-            <table class="table table-dark">
-              <tr>
-                <td>1</td>
-                <td>제목 : 독감 백신, 과연 맞아도 되는가?!</td>
-                <td>내용 : 독감 백신 사망사건은 00건으로....</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>제목 : 백신 관리 과연 믿을만 한가?!</td>
-                <td>내용 : 독감 백신 관리의 허술...</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>제목 : 독감 백신, 과연 맞아도 되는가?!</td>
-                <td>내용 : 독감 백신 사망사건은 00건으로....</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>제목 : 백신 관리 과연 믿을만 한가?!</td>
-                <td>내용 : 독감 백신 관리의 허술...</td>
-              </tr>
-            </table>
-          </div>
-        </div>
-        <div class="survey">
-          <form class="" action="index.html" method="post">
-            여러분의 나이<br>
-            10대 <input type="radio" name="age" value="">&nbsp;&nbsp;&nbsp;
-            20대 <input type="radio" name="age" value="">&nbsp;&nbsp;&nbsp;
-            30대 <input type="radio" name="age" value="">&nbsp;&nbsp;&nbsp;
-            40대 이상 <input type="radio" name="age" value=""><br><br>
-
-            여러분의 성별<br>
-            남 <input type="radio" name="sex" value="">&nbsp;&nbsp;&nbsp;
-            여 <input type="radio" name="sex" value=""><br><br>
-            
-
-            긍정 뉴스 기사에 대해 어떻게 생각하세요?<br>
-            긍정<input type="checkbox" name="think" value="">&nbsp;&nbsp;&nbsp;
-            부정<input type="checkbox" name="think" value="">&nbsp;&nbsp;&nbsp;
-            중립<input type="checkbox" name="think" value=""><br><br>
-
-            부정 뉴스 기사에 대해 어떻게 생각하세요?<br>
-            긍정<input type="checkbox" name="think" value="">&nbsp;&nbsp;&nbsp;
-            부정<input type="checkbox" name="think" value="">&nbsp;&nbsp;&nbsp;
-            중립<input type="checkbox" name="think" value=""><br><br>
-
-          </form>
-        </div>
-        <div class="wrap">
-            <button class="button" onclick="location.href = './src/graph.html'">Submit</button>
-        </div>
-      </div>
-
-      <div class="card-side card-back">
-      </div>
-
-    </div>
-  </div>
-
-  <script>
-    setTimeout(function() {
-      document.body.classList.add('id-card-active');
-    }, 100);
-  </script>
-
-  </body>
-
+    </body>
 </html>

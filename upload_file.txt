@@ -1,53 +1,53 @@
 0	https://news.joins.com/article/olink/23499877	인플루엔자(독감) 백신을 맞은 뒤 
-1	https://www.yna.co.kr/view/AKR20201028083400083?input=1195m	중국 언론이 한국에서 독감백신 접종
+0	https://www.yna.co.kr/view/AKR20201028083400083?input=1195m	중국 언론이 한국에서 독감백신 접종
 1	http://news.kbs.co.kr/news/view.do?ncd=5034788&ref=A	식품의약품안전처는 백색 입자가 발견
 0	https://www.fnnews.com/news/202010280747204972	정은경 질병관리청 청장이 내일(29
-1	https://news.sbs.co.kr/news/endPage.do?news_id=N1006044472&plink=ORI&cooper=NAVER	백색 입자가 발견된 독감(인플루엔자
+0	https://news.sbs.co.kr/news/endPage.do?news_id=N1006044472&plink=ORI&cooper=NAVER	백색 입자가 발견된 독감(인플루엔자
 0	https://www.yna.co.kr/view/AKR20201027105951530?input=1195m	박능후 보건복지부 장관이 27일 세
-1	https://www.seoul.co.kr/news/newsView.php?id=20201027500078&wlog_tag3=naver	독감 백신 접종 뒤 이틀 만에 숨진
-1	https://cnbc.sbs.co.kr/article_hub/10001000766?division=NAVER	[앵커]
+0	https://www.seoul.co.kr/news/newsView.php?id=20201027500078&wlog_tag3=naver	독감 백신 접종 뒤 이틀 만에 숨진
+0	https://cnbc.sbs.co.kr/article_hub/10001000766?division=NAVER	[앵커]
 코로나19로 마스크와 손 
-1	http://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0002688010&CMPT_CD=P0010&utm_source=naver&utm_medium=newsearch&utm_campaign=naver_news	뉴스의 강력한 효과를 연일 느끼고 
-1	http://news.kbs.co.kr/news/view.do?ncd=5035930&ref=A	[앵커]
+0	http://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0002688010&CMPT_CD=P0010&utm_source=naver&utm_medium=newsearch&utm_campaign=naver_news	뉴스의 강력한 효과를 연일 느끼고 
+0	http://news.kbs.co.kr/news/view.do?ncd=5035930&ref=A	[앵커]
 청주의료원 직원들이 독감 
 0	http://www.segye.com/newsView/20201027515540?OutUrl=naver	최근 인플루엔자(독감) 백신을 접종
 0	http://news.kmib.co.kr/article/view.asp?arcid=0924162207&code=11131200&cp=nv	인플루엔자(독감) 백신을 맞고 이틀
 0	http://news.kbs.co.kr/news/view.do?ncd=5034690&ref=A	박능후 중앙재난안전대책본부 1차장(
 0	http://dongascience.donga.com/news/view/40995	코로나19로 골치가 아픈 요즘 생각
-0	http://www.segye.com/newsView/20201027521911?OutUrl=naver	최근 인플루엔자(독감) 백신 접종 
+1	http://www.segye.com/newsView/20201027521911?OutUrl=naver	최근 인플루엔자(독감) 백신 접종 
 0	https://www.yna.co.kr/view/AKR20201026150300017?input=1195m	고연령층과 지병환자(기저질환자) 집
-1	https://theleader.mt.co.kr/articleView.html?no=2020102810037871514	정세균 국무총리가 28일 인플루엔자
-1	https://www.yna.co.kr/view/AKR20201027133000502?input=1195m	"이왕 돈 주고 맞을 거면 수입(輸
-1	https://www.hankyung.com/society/article/2020102739787	경찰이 독감백신을 접종받은 후 사망
-1	https://www.news1.kr/articles/?4101568	부산에서는 인플루엔자(독감)백신 접
+0	https://theleader.mt.co.kr/articleView.html?no=2020102810037871514	정세균 국무총리가 28일 인플루엔자
+0	https://www.yna.co.kr/view/AKR20201027133000502?input=1195m	"이왕 돈 주고 맞을 거면 수입(輸
+0	https://www.hankyung.com/society/article/2020102739787	경찰이 독감백신을 접종받은 후 사망
+0	https://www.news1.kr/articles/?4101568	부산에서는 인플루엔자(독감)백신 접
 0	http://news.tvchosun.com/site/data/html_dir/2020/10/26/2020102690015.html	[앵커]
 독신 백신을 맞은 뒤 숨지
-1	http://health.chosun.com/site/data/html_dir/2020/10/27/2020102702281.html	"고령층은 너무 서둘러 독감 백신 
+0	http://health.chosun.com/site/data/html_dir/2020/10/27/2020102702281.html	"고령층은 너무 서둘러 독감 백신 
 1	http://news.kbs.co.kr/news/view.do?ncd=5035911&ref=A	[앵커]
 최근 독감 백신과 관련한 
 1	https://newsis.com/view/?id=NISX20201027_0001212076&cID=10301&pID=10300	주한미군 사령부가 소속 장병과 관계
 1	https://newsis.com/view/?id=NISX20201027_0001212907&cID=10201&pID=10200	박능후 보건복지부 장관이 27일 인
 1	https://www.yonhapnewstv.co.kr/news/MYH20201026008100038?did=1825m	만 62~69세 독감백신 접종 시작
-1	http://news.kmib.co.kr/article/view.asp?arcid=0015153059&code=61121211&cp=nv	지난 16일 인플루엔자(독감) 백신
+0	http://news.kmib.co.kr/article/view.asp?arcid=0015153059&code=61121211&cp=nv	지난 16일 인플루엔자(독감) 백신
 1	https://www.news1.kr/articles/?4100010	식품의약품안전처가 백색입자가 형성된
 0	https://www.pressian.com/pages/articles/2020102615123668389?utm_source=naver&utm_medium=search	문재인 대통령이 독감 백신 접종 뒤
-1	http://health.chosun.com/site/data/html_dir/2020/10/26/2020102601875.html	26일부터 62세 이상 독감 무료 
-1	https://www.fnnews.com/news/202010261440496544	문재인 대통령은 26일 잇따른 인플
-1	http://news.khan.co.kr/kh_news/khan_art_view.html?artid=202010261717001&code=940601	올해 인플루엔자(독감) 백신 접종 
-1	https://newsis.com/view/?id=NISX20201028_0001213325&cID=10201&pID=10200	신종 코로나바이러스 감염증(코로나1
+0	http://health.chosun.com/site/data/html_dir/2020/10/26/2020102601875.html	26일부터 62세 이상 독감 무료 
+0	https://www.fnnews.com/news/202010261440496544	문재인 대통령은 26일 잇따른 인플
+0	http://news.khan.co.kr/kh_news/khan_art_view.html?artid=202010261717001&code=940601	올해 인플루엔자(독감) 백신 접종 
+0	https://newsis.com/view/?id=NISX20201028_0001213325&cID=10201&pID=10200	신종 코로나바이러스 감염증(코로나1
 1	https://www.hankyung.com/politics/article/2020102699587	문재인 대통령은 26일 올해 사망자
 1	http://news.kmib.co.kr/article/view.asp?arcid=0924161986&code=11132000&cp=nv	인플루엔자(독감) 예방접종 후 사망
 0	https://view.asiae.co.kr/article/2020102810153316216	독감 백신 접종을 맞고 이틀 뒤 숨
-1	https://www.seoul.co.kr/news/newsView.php?id=20201027005012&wlog_tag3=naver	인플루엔자(독감) 백신과 사망 사례
+0	https://www.seoul.co.kr/news/newsView.php?id=20201027005012&wlog_tag3=naver	인플루엔자(독감) 백신과 사망 사례
 0	https://www.seoul.co.kr/news/newsView.php?id=20201028009009&wlog_tag3=naver	독감 백신 접종 후 이틀 만에 숨진
-1	https://www.yna.co.kr/view/AKR20201026108951530?input=1195m	인플루엔자(독감) 백신을 맞은 뒤 
-1	https://news.mt.co.kr/mtview.php?no=2020102709112473309	박능후 보건복지부 장관은 27일 “
-1	https://news.joins.com/article/23903792	문 대통령은 이날 언급으로 정은경 
+0	https://www.yna.co.kr/view/AKR20201026108951530?input=1195m	인플루엔자(독감) 백신을 맞은 뒤 
+0	https://news.mt.co.kr/mtview.php?no=2020102709112473309	박능후 보건복지부 장관은 27일 “
+0	https://news.joins.com/article/23903792	문 대통령은 이날 언급으로 정은경 
 0	http://www.hani.co.kr/arti/area/capital/967364.html	인플루엔자(독감) 백신을 접종한 뒤
-1	https://news.joins.com/article/23904846	독감 백신을 접종한 지 이틀 만에 
-1	https://news.joins.com/article/23904141	박능후 보건복지부 장관이 인플루엔자
-1	http://www.jbnews.com/news/articleView.html?idxno=1312069	올해 인플루엔자(독감) 국가예방접종
+0	https://news.joins.com/article/23904846	독감 백신을 접종한 지 이틀 만에 
+0	https://news.joins.com/article/23904141	박능후 보건복지부 장관이 인플루엔자
+0	http://www.jbnews.com/news/articleView.html?idxno=1312069	올해 인플루엔자(독감) 국가예방접종
 0	http://www.segye.com/newsView/20201027521509?OutUrl=naver	백색입자가 발견돼 회수가 결정된 독
-1	https://shindonga.donga.com/3/all/13/2226864/1	“요즘 많은 환자분이 제게 독감백신
+0	https://shindonga.donga.com/3/all/13/2226864/1	“요즘 많은 환자분이 제게 독감백신
 0	https://news.joins.com/article/23907948	30일 청주시는 지난 27일 오전 
 1	https://www.yna.co.kr/view/AKR20201029129451530?input=1195m	올해 인플루엔자(독감) 백신을 맞은
