@@ -1,4 +1,4 @@
-import mecab
+import MeCab
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -9,7 +9,7 @@ from sklearn.model_selection import train_test_split
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
-mecab = mecab.MeCab()
+mecab = Mecab()
 
 total_data = pd.read_table("news.txt", error_bad_lines=False, sep='\t', names=['label', 'sentence'])
 
@@ -97,7 +97,7 @@ def below_threshold_len(max_len, nested_list):
 print('문장의 최대 길이 :',max(len(l) for l in X_train))
 print('문장의 평균 길이 :',sum(map(len, X_train))/len(X_train))
 
-max_len = 100
+max_len = 35
 below_threshold_len(max_len, X_train)
 
 X_train = pad_sequences(X_train, maxlen = max_len)
@@ -118,7 +118,7 @@ es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=4)
 mc = ModelCheckpoint('best_model.h5', monitor='val_acc', mode='max', verbose=1, save_best_only=True)
 
 model.compile(optimizer='rmsprop', loss='binary_crossentropy', metrics=['acc'])
-history = model.fit(X_train, y_train, epochs=30, callbacks=[es, mc], batch_size=256, validation_split=0.1)
+history = model.fit(X_train, y_train, epochs=30, callbacks=[es, mc], batch_size=256, validation_split=0.12)
 
 loaded_model = load_model('best_model.h5')
 print("테스트 정확도: %.4f" % (loaded_model.evaluate(X_test, y_test)[1]))
@@ -132,7 +132,7 @@ url_link = open("upload_file.txt", 'w')
 def sentiment_predict(new_sentence):
     text = copy.copy(new_sentence)
     url = new_slice.findall(text)
-    data = '\t'+str(url[0])+'\t'+str(text.split(str(url[0]))[1][1:20])+'\n'
+    data = '\t'+str(url[0])+'\t'+str(''.join(text.split(str(url[0]))[1][1:30].split('\n')))+'...'+'\n'
     new_sentence = re.sub(r'[^ㄱ-ㅎㅏ-ㅣ가-힣 ]','', new_sentence)
     new_sentence = mecab.morphs(new_sentence) # 토큰화
     new_sentence = [word for word in new_sentence if not word in stopwords] # 불용어 제거
@@ -141,10 +141,10 @@ def sentiment_predict(new_sentence):
     score = float(loaded_model.predict(pad_new)) # 예측
     if(score > 0.5):
         print("{:.2f}% 확률로 긍정 기사입니다.".format(score * 100))
-        url_link.write('1'+str(data))
+        url_link.write('1'+data)
     else:
         print("{:.2f}% 확률로 부정 기사입니다.".format((1 - score) * 100))
-        url_link.write('0'+str(data))
+        url_link.write('0'+data)
 
 f = open("news_test.txt", 'r')
 string = f.read()
