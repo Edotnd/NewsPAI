@@ -1,11 +1,40 @@
 <html>
     <head>
         <meta charset="utf-8">
-    </head>
-    <style type="text/css">
+        <style type="text/css">
+        header .A {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 50%;
+  
+  height: 75px;
+  padding: 1rem;
+  color: white;
+  background: teal;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+        }
+        header .B {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  right: 0;
+  
+  height: 75px;
+  padding: 1rem;
+  color: white;
+  text-align: center; 
+  background: #e02860;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+        }
+        #wrap h1 {position:absolute;top:50%;left:50%;transform: translate(-50%,-100%)}
         .div_container {
             height: 100vh;
-            width:100vw;
+            width:92vw;
             display:flex; 
             flex-direction: row;
         }
@@ -13,27 +42,86 @@
         .div_container .div1 {
             flex:1;
         }
-        
-        .div_container .div2 { 
-            flex:1;
+
+        main {
+            padding: 1rem;
+            height: 100%;  
         }
-    </style>
+            body {
+  padding-top: 100px;
+}
+
+body, html {
+  height: 200%;
+}
+
+.info {
+  padding: 20px;
+ width: 650px;
+  background: #f1f1f1;
+margin: 10px;
+}
+.name{
+  text-transform: uppercase;
+  font-size: 24px;
+  color: #333;
+}
+
+.dis{
+  font-size: 16px;
+  opacity: 0.7;
+}
+.btn_t{
+  display: block;
+  background: #3ea371;
+  text-align: center;
+  color: #fff;
+  padding: 10px;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+.btn_f{
+  display: block;
+  background: #c93462;
+  text-align: center;
+  color: #fff;
+  padding: 10px;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+.btn:hover{
+  background: #333;
+}
+
+
+        </style>
+    </head>
+    <header>
+        <div class="A"><div id="wrap"><h1>긍정 기사</h1></div></div>
+        <div class="B"><div id="wrap"><h1>부정 기사</h1></div></div>
+    </header>
     <body>
+        <main>
         <div class="div_container">
             <div class="div1">
                 {% for i in t_data %}
-                    <a href="{{ i[0] }}">긍정기사</a>
-                    <p>{{ i[1] }}</p>
-                    <br>
+                  <div class="info">
+                    <div class="name">Positive News</div>
+                        <div class="dis">{{ i[1] }}</div>
+                        <a class="btn_t" href="{{ i[0] }}">More News</a>
+                  </div>
                 {% endfor %}
             </div>
             <div class="div1">
-                {% for i in f_data %}
-                    <a href="{{ i[0] }}">부정기사</a>
-                    <p>{{ i[1] }}</p>
-                    <br>
+                {% for j in f_data %}
+                  <div class="info">
+                    <div class="name">Negative News</div>
+                        <div class="dis">{{ j[1] }}</div>
+                        <a class="btn_f" href="{{ j[0] }}">More News</a>
+                  </div>
                 {% endfor %}
             </div>
         </div>
+        </main>
     </body>
 </html>
